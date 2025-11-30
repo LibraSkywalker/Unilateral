@@ -35,9 +35,9 @@ Phase-Oriented World-Building Specification in Cuelang
 ### Specification
 
 - **Project Intent**
-  - State the purpose and objectives of the project
-  - Describe what the system aims to accomplish
-  - Clarify the scope and boundaries of the project
+  - Maintain comprehensive documentation for project understanding
+  - Define status criteria to track project readiness and completeness
+  - Optimize for AI searchability to enable seamless integration
 
 - **Requirements**
   - Document functional requirements in clear terms
