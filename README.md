@@ -13,6 +13,7 @@ Phase-Oriented World-Building Specification in Cuelang
 - **Platform Integration**
   - Define connection points between external systems and the world specification
   - Establish authentication and authorization boundaries
+  - Manage cross-platform communication protocols and data transformations
 
 - **Entity Discovery**
   - Catalog available platform entities (services, resources, agents)
@@ -24,7 +25,6 @@ Phase-Oriented World-Building Specification in Cuelang
   - Configure environment-specific adapters (development, staging, production)
   - Enable world forking and merging strategies
   - Define synchronization rules between twin instances
-  - Policy-based combination is battery included
 
 ---
 
