@@ -40,8 +40,8 @@ Phase-Oriented World-Building Specification in Cuelang
   - Optimize for AI searchability to enable seamless integration
 
 - **Requirements**
-  - Document functional requirements in clear terms
-  - Specify non-functional requirements (performance, reliability)
+  - Define input and output specifications for each component
+  - Establish naming conventions and terminology standards
   - List dependencies and prerequisites
 
 - **Architecture Sketch**
