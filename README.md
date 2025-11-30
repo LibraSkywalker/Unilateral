@@ -35,19 +35,19 @@ Phase-Oriented World-Building Specification in Cuelang
 ### Specification
 
 - **Project Intent**
-  - Define the core objectives and success criteria
-  - Establish scope boundaries and non-goals
-  - Document stakeholder expectations and priorities
+  - Define the vision and long-term goals for system evolution
+  - Establish essential value propositions that justify resource investment
+  - Identify opportunities for continuous refinement and growth
 
 - **Requirements**
-  - Specify functional requirements with acceptance criteria
-  - Define non-functional requirements (performance, security, reliability)
-  - Capture constraints and dependencies
+  - Curate essential entities that contribute to the whole system
+  - Evaluate and integrate external resources that enhance capabilities
+  - Prioritize requirements based on systemic value and sustainability
 
 - **Architecture Sketch**
-  - Outline high-level system components and their relationships
-  - Define data flow patterns and communication protocols
-  - Establish architectural decision records (ADRs)
+  - Design extensible foundations that accommodate future resources
+  - Map integration points for introducing external components
+  - Ensure architectural coherence as the system evolves
 
 ---
 
