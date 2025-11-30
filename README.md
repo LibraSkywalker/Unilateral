@@ -34,7 +34,7 @@ Phase-Oriented World-Building Specification in Cuelang
 
 ### Specification
 
-- **Project Intent**
+- **Documentation**
   - Maintain comprehensive documentation for project understanding
   - Define status criteria to track project readiness and completeness
   - Optimize for AI searchability to enable seamless integration
