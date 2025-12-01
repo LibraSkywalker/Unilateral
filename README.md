@@ -40,14 +40,14 @@ Phase-Oriented World-Building Specification in Cuelang
   - Optimize for AI searchability to enable seamless integration
 
 - **Component Specifications**
-  - Define input and output specifications for each component
   - Specify functional behaviors and quality attributes for each component
+  - Define input and output specifications for each component
   - List dependencies and prerequisites
 
 - **Architecture Sketch**
-  - Illustrate high-level system components and relationships
-  - Describe data flow and communication patterns
-  - Outline the structural organization of the codebase
+  - Sketch high-level system components and relationships
+  - Sketch data flow and communication patterns
+  - Sketch the structural organization of the codebase
 
 ---
 
