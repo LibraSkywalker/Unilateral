@@ -2,6 +2,8 @@
 
 Phase-Oriented World-Building Specification in Cuelang
 
+Only Zone 0 is system-wide and other configuration are project based.
+
 ---
 
 ## Zone 0: Meta
