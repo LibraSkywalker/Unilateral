@@ -39,7 +39,7 @@ Phase-Oriented World-Building Specification in Cuelang
   - Define status criteria to track project readiness and completeness
   - Optimize for AI searchability to enable seamless integration
 
-- **Requirements**
+- **Component Specifications**
   - Define input and output specifications for each component
   - Specify functional behaviors and quality attributes for each component
   - List dependencies and prerequisites
