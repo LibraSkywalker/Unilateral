@@ -41,7 +41,7 @@ Phase-Oriented World-Building Specification in Cuelang
 
 - **Requirements**
   - Define input and output specifications for each component
-  - Establish naming conventions and terminology standards
+  - Specify functional behaviors and quality attributes for each component
   - List dependencies and prerequisites
 
 - **Architecture Sketch**
