@@ -6,14 +6,14 @@ Phase-Oriented World-Building Specification in Cuelang
 
 ## Zone 0: Meta
 
-**Purpose:** Integration, platform entity discovery, twin worlds for different purposes.
+**Purpose:** Platform Integration, platform entity discovery, twin worlds.
 
 ### Specification
 
 - **Platform Integration**
   - Define connection points between external systems and the world specification
   - Establish authentication and authorization boundaries
-  - Manage cross-platform communication protocols and data transformations
+  - (Optional)Manage cross-platform communication protocols and data transformations
 
 - **Entity Discovery**
   - Catalog available platform entities (services, resources, agents)
@@ -30,13 +30,13 @@ Phase-Oriented World-Building Specification in Cuelang
 
 ## Zone 1: Declaration
 
-**Purpose:** Project intent, requirements, architecture sketch.
+**Purpose:** Documentation, Component Specifications, Ontology.
 
 ### Specification
 
 - **Documentation**
   - Maintain comprehensive documentation for project understanding
-  - Define status criteria to track project readiness and completeness
+  - Define status criteria to track combined functionality and completeness
   - Optimize for AI searchability to enable seamless integration
 
 - **Component Specifications**
@@ -44,62 +44,62 @@ Phase-Oriented World-Building Specification in Cuelang
   - Define input and output specifications for each component
   - List dependencies and prerequisites
 
-- **Architecture Sketch**
-  - Sketch high-level system components and relationships
-  - Sketch data flow and communication patterns
-  - Sketch the structural organization of the codebase
+- **Ontology**
+  - Define components as world entities/artifact and their relationships.
+  - Define data flow and communication patterns
+  - Define latent behaviors (e.g., quality, availability) that cannot be directly observed.
 
 ---
 
 ## Zone 2: Construction
 
-**Purpose:** Turn scaffolds into artifact, add observability, wire agents.
+**Purpose:** Deployment, Observability, Agent wiring.
 
 ### Specification
 
-- **Scaffold to Artifact**
+- **Deployment**
   - Transform declarative specifications into deployable artifacts
   - Generate configuration files, manifests, and infrastructure code
   - Validate artifact integrity and completeness
 
 - **Observability**
   - Instrument artifacts with logging, metrics, and tracing
-  - Define alerting rules and thresholds
-  - Establish dashboards and visualization templates
-
+  - Quantify latent attributes of artifacts.
+  - Attach analytical components and layouts in the CMS for a more comprehensive understanding.
+    
 - **Agent Wiring**
   - Connect autonomous agents to their designated roles
   - Configure agent communication channels and protocols
-  - Define agent permissions and operational boundaries
+  - (Optional) Define agent selective memory pattern and operational boundaries
 
 ---
 
 ## Zone 3: Execution
 
-**Purpose:** Operate with real resources; model requests to metric.
+**Purpose:** model requests, Resource Operation, metric.
 
 ### Specification
 
-- **Resource Operation**
-  - Deploy artifacts to target environments
-  - Manage resource provisioning and deprovisioning
-  - Handle scaling, failover, and recovery procedures
-
 - **Request Modeling**
   - Capture incoming requests and their characteristics
-  - Route requests through appropriate processing pipelines
+  - Route requests through appropriate processing units.
   - Track request lifecycle from ingestion to completion
+
+- **Resource Operation**
+  - (Optional)Deploy artifacts to target environments
+  - (Optional)Manage resource provisioning and deprovisioning
+  - Handle scaling, failover, and recovery procedures
 
 - **Metric Generation**
   - Convert operational events into measurable metrics
   - Aggregate and store metric data for analysis
-  - Expose metrics through standardized interfaces
+  - Declare a storyboard with CMS components.
 
 ---
 
 ## Zone 4: Evaluation
 
-**Purpose:** Analyze data, assess goals, feed the next cycle.
+**Purpose:** Analyze data, Completeness Assessment, feed the next cycle.
 
 ### Specification
 
@@ -108,10 +108,10 @@ Phase-Oriented World-Building Specification in Cuelang
   - Identify patterns, anomalies, and trends
   - Generate reports and summaries
 
-- **Goal Assessment**
-  - Compare actual outcomes against declared objectives
-  - Calculate success metrics and key performance indicators
-  - Identify gaps and areas for improvement
+- **Completeness Assessment**
+  - Assess whether overall combined functionality and latent behavior are fulfilled.
+  - Define the conditions that triggers the incompleteness.
+  - Constructing Hidden relationship flow between latent behavior, conditions and error.
 
 - **Cycle Feedback**
   - Synthesize learnings into actionable recommendations
