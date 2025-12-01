@@ -74,7 +74,7 @@ Phase-Oriented World-Building Specification in Cuelang
 
 ---
 
-## Zone 3: Execution
+## Zone 3: Execution (WIP)
 
 **Purpose:** model requests, Resource Operation, metric.
 
