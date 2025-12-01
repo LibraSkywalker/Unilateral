@@ -21,7 +21,7 @@ Phase-Oriented World-Building Specification in Cuelang
   - Maintain entity lifecycle states and health indicators
 
 - **Twin Worlds**
-  - Support parallel world instances for different purposes (testing, simulation, production)
+  - Support parallel world instances for different purposes (testing, simulation, production, underworld system)
   - Configure environment-specific adapters (development, staging, production)
   - Enable world forking and merging strategies
   - Define synchronization rules between twin instances
