@@ -1,146 +1,437 @@
-# Vision: The Cybernetic Landscape Architecture
+# Unilateral: The Cybernetic Landscape Architecture
 ### Canonical Architecture Reference (Zone $\times$ Plane $\times$ Factor)
 
 ## 1. The Architectural Axioms: 
-We define the architecture not as a stack of services, but as a living ecology governed by fundamental, orthogonal forces. This separation of concerns ensures **MECE (Mutually Exclusive, Collectively Exhaustive)** structural governance.
-
-### Prioritization Rule: Plane $\times$ Factor
-    The axis order defines the prioritization for configuration:
-    Plane (Function) Priority (Highest): This is the What (what is the job?).
-    Factor (Scope) Priority (Secondary): This is the How (how granular should the definition be?).
     
-### The Four Planes (Function)
-    Data Plane (Substance): State and Structure.
-    Control Plane (Order): Mechanics and Wiring.
-    Cognitive Plane (Meaning): Identity and Logic.
-    Interaction Plane (Boundary): Visibility and Permission.
+### The Four Planes 
+| Plane (平面) | 针对 Active Entity (Worker)<br>*(如: Pods, Agents)* | 针对 Passive Entity (Data)<br>*(如: Datasets, Configs)* | **通用抽象 (General Abstraction)** |
+| :--- | :--- | :--- | :--- |
+| **Data Plane**<br>*(Substance)* | **Skillset (Capabilities)**<br>技能集：它能执行什么操作？<br>*(e.g., CUDA支持, Python库)* | **Schema (Properties)**<br>模式/属性：它能被如何读取？<br>*(e.g., 列定义, 压缩格式)* | **Definition (定义域)**<br>**它拥有什么潜能？(Potentials)**<br>内禀的静态属性。 |
+| **Control Plane**<br>*(Order)* | **Orchestration (Policy)**<br>编排：它如何被调度？<br>*(e.g., 重试逻辑, 资源限制)* | **Lifecycle (Policy)**<br>生命周期：它如何流转？<br>*(e.g., 保留期, 冷热分层)* | **Mechanics (执行域)**<br>**它如何被操作？(Kinematics)**<br>外在的动态规则。 |
+| **Cognitive Plane**<br>*(Meaning)* | **Role / Agent Type**<br>角色：它在系统中是谁？<br>*(e.g., "数据清洗工", "网关")* | **Semantic Meaning**<br>语义：它代表什么业务概念？<br>*(e.g., "2024年销售额")* | **Identity (认知域)**<br>**它代表什么意义？(Meaning)**<br>逻辑身份与元数据索引。 |
+| **Interaction Plane**<br>*(Boundary)* | **API / Interface**<br>接口：如何向它发送指令？<br>*(e.g., gRPC, REST)* | **Access Protocol**<br>协议：如何获取它的内容？<br>*(e.g., FUSE mount, S3 get)* | **Boundary (交互域)**<br>**它如何被触达？(Visibility)**<br>可见性与访问边界。 |
 
-### The Three Factors (Scope)
-    Entity-Centric (E): Atomic identity and substance.
-    Temporal (T): Causality, sequencing, and flow efficiency.
-    Spatial (S): Topology, relations, and isolation boundaries.
+### The Four Dimensions
+| Fabrication Dimension | Active Worker | Passive Entity |
+| :--- | :--- | :--- |
+| **1. Spec** | Defines the execution logic through code references or image digests. | Defines the data structure through schema definitions and source locations. |
+| **2. Config** | Applies runtime constraints such as compute quotas and environment variables. | Applies access controls such as mount paths and permission views. |
+| **3. Instance** | Produces a dynamic process that consumes time and computational resources. | Produces a local handle or materialized view that occupies storage space. |
+| **4. Termination** | The process stops, releasing compute resources and resetting state. | The mount detaches, removing the local view and reclaiming cache. |
 
+### The Three Factors
+
+| Factor | Focus | Core Definition (Business Logic) | Corresponds to Your Need |
+| :--- | :--- | :--- | :--- |
+| **Entity (E)**<br>*(Substance)* | **Identity & Substance**<br>(The Core) | **"Who am I?"**<br>The intrinsic, immutable core of the entity. Its unique ID and essential business properties (e.g., "This is a contract," "Here is its value"). | The nucleus of the entity dependency, the essence that does not change with the observer. |
+| **Temporal (T)**<br>*(Flow)* | **State & Causality**<br>(The Lifecycle) | **"What stage am I at?"**<br>From a business process view: Is it a "draft," "pending approval," or "archived"? This defines its mutability in time. | The lifecycle and version progression of the entity. |
+| **Scoping (S)**<br>*(Exposure)* | **Visibility & Exposure**<br>(The Interface) | **"What do I show you?"**<br>This is the entity's **surface area**. Based on the observer (Context), the entity decides which attributes to **expose** and which details to **mask**. | **"Need it to be visible during observation"**<br>**"Need to expose specific attributes"** |
 ---
 
 ## 2. Layer 3: The Landscape (The Canonical Zone Specification)
 
-Layer 3 is the living territory where the system evolves. We define its operations via the **Plane $\times$ Factor** matrix, establishing priority (Imp. 3=Critical) for every action.
+Layer 3 is the living territory where the system evolves. 
 
-### Zone 0: Meta (Context & Integration)
-**Purpose:** Defining the Environment and Isolation Boundaries. (Focus: **Spatial** and **Control**)
+## Zone 0: Meta (World Definition)
+*Before an entity exists, we must define what it means to "be" and what tools are available.*
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **I. Interaction** | **Spatial (S)** | **I-S** | 3 | **Twin World Boundary Definition:** Defines external access points and isolation rules for the specific World instance (e.g., Firewall/Governance scope). |
-| **II. Control** | **Spatial (S)** | **C-S** | 3 | **Isolation Logic:** The mechanism ensuring Twin Worlds (Dev/Prod) do not interfere (e.g., Namespace isolation). |
-| **I. Interaction** | **Entity (E)** | **I-E** | 2 | **Platform Binding Spec:** The explicit human-readable contract for required resources (e.g., Required K8s CPU). |
-| **III. Cognitive** | **Entity (E)** | **G-E** | 2 | **Context Recognition:** Primary prompt guiding the Agent's understanding of its environment ("You are in the Simulation World"). |
-| **I. Interaction** | **Temporal (T)** | **I-T** | 2 | **Status Refresh Rate:** How often the system polls Platform health metrics. |
-| **II. Control** | **Temporal (T)** | **C-T** | 1 | **Bootstrap Timeout:** Maximum time allowed for system initialization before failover. |
-| **IV. Data** | **Entity (E)** | **D-E** | 1 | **Registry Handle:** The pointer to the core Artifact Registry (e.g., the URL of the external Storage cluster). |
+Objective: Definition, Standardization, and Legislation. (Its purpose is to establish the rules, not to play the game.)
+
+Context: Zone 0 does not contain specific projects or data. It contains the definitions that allow projects and data to exist. It establishes the "Standard Model" of the digital universe.
+
+### Phenomenon 1: Ontological Anchoring
+**The establishment of the cognitive framework.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Archetype** | The abstract template of an Entity. Defines required Planes (e.g., "All Services must have an API"). | **Cognitive Plane** (Identity) |
+| **Taxonomy** | The hierarchical classification system (e.g., `System > Domain > Service`). | **Cognitive Plane** (Role) |
+| **Semantics** | The dictionary of reserved business concepts (e.g., "GrossRevenue" vs "NetRevenue"). | **Cognitive Plane** (Meaning) |
+
+### Phenomenon 2: Capability Registration
+**The cataloging of potential.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Primitive** | The atomic units of technology (e.g., "Postgres 15", "Redis 7", "WASM Module"). | **Data Plane** (Skillset) |
+| **Metaschema** | The syntax rules for defining schemas (e.g., "All specs must be valid CUE or JSON Schema"). | **Data Plane** (Schema) |
+| **Registry** | The trusted repository of immutable artifacts (The "Periodic Table" of elements). | **Data Plane** (Substance) |
+
+### Phenomenon 3: Protocol Legislation
+**The setting of immutable laws for interaction.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Contract** | Standardized interface definitions (e.g., "Standard Health Check", "OpenAPI Spec"). | **Interaction Plane** (API) |
+| **Governance** | Global policies applied to all entities (e.g., "Data Retention Laws", "Audit Requirements"). | **Control Plane** (Lifecycle) |
+| **Invariant** | Rules that cannot be broken (e.g., "No Entity exists without a Creator ID"). | **Control Plane** (Policy) |
+
+### Phenomenon 4: Dimensional Bifurcation (Forking)
+**The physics of duplication and lineage.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Lineage ID** | The cryptographic trace of origin. Defines the genealogical tree of the world. | **Cognitive Plane** (Identity) |
+| **Mutation Vector** | The specific variables allowed to change during a fork (e.g., "Keep Code, Reset Data"). | **Data Plane** (Properties) |
+| **Inheritance Mode** | The copy mechanic: "Deep Copy" (Independent) vs. "Cow" (Copy-on-Write / Linked). | **Control Plane** (Mechanics) |
+
+### Phenomenon 5: Quantum Entanglement (Sync)
+**The physics of connection between Origin and Twin.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Resonance Link** | The channel connecting a `Source Entity` to its `Twin Entity`. | **Interaction Plane** (Boundary) |
+| **Drift Metric** | The quantification of difference between worlds (e.g., "Schema Drift", "Data Lag"). | **Control Plane** (Orchestration) |
+| **Reconciliation Logic** | The laws of resolving conflict between worlds (e.g., "Origin Wins", "Merge", "Reject"). | **Control Plane** (Policy) |
+
+### Phenomenon 6: Resource Calibration (Economics)
+**The definition of mass and energy.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Unit** | The atomic measure of consumption (e.g., "vCPU-Hour", "Storage-GB"). | **Data Plane** (Schema) |
+| **Tier (QoS)** | Service level definitions (e.g., "Critical", "Best-Effort"). | **Control Plane** (Orchestration) |
+| **Quota** | The meta-definition of limits and scarcity. | **Control Plane** (Policy) |
+
+### Phenomenon 7: Causality Synchronization (Time)
+**The definition of the flow of time.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Epoch** | The universal reference point for time. | **Control Plane** (Lifecycle) |
+| **Consistency Model** | The rules of data propagation (e.g., "Strong" vs "Eventual"). | **Data Plane** (Potential) |
+| **Version Strategy** | The logic of mutation naming (e.g., SemVer, Hashing). | **Control Plane** (Mechanics) |
+
+### Phenomenon 8: Signal Standardization (Senses)
+**The definition of how the system perceives itself.**
+
+| Term | Definition within Zone 0 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Telemetry Schema** | The standard format for logs, metrics, and traces. | **Interaction Plane** (Boundary) |
+| **Severity** | The taxonomy of urgency (e.g., "P0", "P1", "Info"). | **Cognitive Plane** (Meaning) |
+| **Correlation** | The logic for linking events across boundaries (Trace IDs). | **Control Plane** (Orchestration) |
+---
+
+## Zone 1: Declaration (The Architect's Studio)
+
+**Objective:** Design, Specification, and Intent.
+
+**Context:** The Laws of Zone 0 are applied here to create a specific Project/Entity. This is the realm of the "Manifest" and the "Code Repository."
+
+### Phenomenon 1: Archetypal Inheritance
+*The act of selecting a form.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Class Extension** | The declaration of the parent type (e.g., `kind: Service`). | **Cognitive Plane** (Identity) |
+| **Trait Adoption** | The selection of optional behaviors (e.g., `mixins: [auth]`). | **Data Plane** (Skillset) |
+| **Metadata Tagging** | Labels for organization (e.g., `owner: team-a`). | **Cognitive Plane** (Meaning) |
+
+### Phenomenon 2: Logic Composition
+*The encoding of intrinsic behavior (The DNA).*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Source Binding** | Pointer to logic repo (e.g., `git_repo: xyz`). | **Fabrication Dimension** (Spec) |
+| **Schema Declaration** | Definition of internal structure (e.g., SQL DDL). | **Data Plane** (Schema) |
+| **Immutable Artifact** | Frozen build object (e.g., Docker Image Digest). | **Data Plane** (Substance) |
+
+### Phenomenon 3: Lineage Assertion (Twin World)
+*The declaration of origin and relation.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Origin Reference** | Pointer to source entity (e.g., `fork_from: prod`). | **Cognitive Plane** (Identity) |
+| **Drift Policy** | Tolerance for divergence. | **Control Plane** (Mechanics) |
+| **Snapshot ID** | The specific Epoch of the Twin's creation. | **Temporal Factor** (State) |
+
+### Phenomenon 4: Interface Projection
+*The promise of contact.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Port Exposure** | Declaration of listening channels. | **Interaction Plane** (API) |
+| **Contract Publication** | Attachment of API Spec (Swagger). | **Interaction Plane** (Access Protocol) |
+| **Visibility Scope** | Who can see this interface. | **Scoping Factor** (Exposure) |
+
+### Phenomenon 5: Dependency Binding
+*The network of needs.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Service Link** | Requirement for other workers. | **Interaction Plane** (Boundary) |
+| **Volume Claim** | Requirement for passive data. | **Data Plane** (Potentials) |
+| **Secret Reference** | Pointer to secured config. | **Control Plane** (Orchestration) |
+
+### Phenomenon 6: Contextual Parameterization
+*The environmental fit.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Config Map** | Non-sensitive variables (e.g., `ENV=DEV`). | **Fabrication Dimension** (Config) |
+| **Feature Flag** | Toggles for code paths. | **Control Plane** (Mechanics) |
+| **Override Layer** | Modifications for Twin status. | **Temporal Factor** (State) |
+
+### Phenomenon 7: Resource Reservation
+*The economic request.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Request Spec** | Minimum resources to start. | **Data Plane** (Skillset) |
+| **Limit Spec** | Maximum allowed consumption. | **Control Plane** (Policy) |
+| **Affinity Rule** | Physical placement preference. | **Control Plane** (Orchestration) |
+
+### Phenomenon 8: Integrity Certification
+*The seal of validity.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Schema Validation** | Check against Zone 0 Metaschema. | **Control Plane** (Policy) |
+| **Policy Check** | Governance verification. | **Control Plane** (Lifecycle) |
+| **Signature Verify** | Proof of authorship. | **Cognitive Plane** (Identity) |
+
+### Phenomenon 9: Semiotic Embedding (Agent Readiness)
+*The encoding of meaning for AI consumption.*
+
+| Term | Definition within Zone 1 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Tool Definition** | JSON Schema for LLM function calling. | **Interaction Plane** (API) |
+| **System Prompt Injection** | Natural language instructions for the Agent. | **Cognitive Plane** (Meaning) |
+| **Vector Signature** | Semantic keywords for Agent discovery. | **Data Plane** (Properties) |
 
 ---
 
-### Zone 1: Declaration (Law & Ontology)
-**Purpose:** Defining the Entity's Identity, Structure, and Behavior. (Focus: **Entity-Centric** and **Cognitive**)
+## Zone 2: Fabrication (The Factory Floor)
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **III. Cognitive** | **Entity (E)** | **G-E** | 3 | **Ontology (Identity):** Naming the entity and defining its semantic meaning (e.g., "High-Value Customer Record"). |
-| **II. Control** | **Spatial (S)** | **C-S** | 3 | **Dependency Map:** The logical graph of connections and required services for the entity to function. |
-| **I. Interaction** | **Entity (E)** | **I-E** | 2 | **Documentation:** The human interface for defining ownership, security classification, and business intent. |
-| **IV. Data** | **Entity (E)** | **D-E** | 2 | **Schema (Structure):** Defining the physical shape of the entity's persistent state (Fields, Types). |
-| **III. Cognitive** | **Temporal (T)** | **G-T** | 2 | **Agent Constitution (Logics):** Defining the Agent's reasoning flow and alignment policies. |
-| **II. Control** | **Temporal (T)** | **C-T** | 1 | **Schedule Definition:** The declared recurrence and expected duration of the entity's lifecycle. |
-| **IV. Data** | **Spatial (S)** | **D-S** | 1 | **Data Locality Policy:** Rules for geographic placement and co-location with specific compute zones. |
+**Objective:** Materialization, Hydration, and Instantiation.
 
+**Context:** Zone 2 transforms the *potential* of Zone 1 into the *kinetic energy* of a running process. It manages the physical resources and the "birth" of the entity.
+
+### Phenomenon 1: Artifact Hydration
+*The assembly of substance and context.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Container Assembly** | Merging Image Layers with Env Vars. | **Fabrication Dimension** (Instance) |
+| **Volume Mounting** | Attaching physical storage. | **Data Plane** (Properties) |
+| **Secret Decryption** | Transforming references to values. | **Control Plane** (Mechanics) |
+
+### Phenomenon 2: Ephemeral Identity Minting
+*The assignment of temporary, runtime names.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Instance UUID** | Unique ID for this specific run. | **Cognitive Plane** (Identity) |
+| **Certificate Issuance** | Creating mTLS proofs for this instance. | **Interaction Plane** (Protocol) |
+| **DNS Registration** | Updating the service discovery phonebook. | **Interaction Plane** (Boundary) |
+
+### Phenomenon 3: Economic Encumbrance
+*The locking and deduction of resources.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Bin Packing** | Scheduling logic (Node placement). | **Control Plane** (Orchestration) |
+| **Quota Deduction** | Subtraction from tenant allowance. | **Control Plane** (Policy) |
+| **Lease Creation** | Time-bound right to exist. | **Temporal Factor** (Lifecycle) |
+
+### Phenomenon 4: Dimensional Divergence
+*The physics of forking for Twin entities.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **State Forking (COW)** | Copy-on-Write storage layer creation. | **Data Plane** (Potential) |
+| **Traffic Shadowing** | Mirroring real traffic to the Twin. | **Control Plane** (Mechanics) |
+| **Mutation Application** | Applying specific Twin overrides. | **Fabrication Dimension** (Config) |
+
+### Phenomenon 5: Resonance Activation
+*Establishing the link to the Origin.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Sync Subscription** | Listening for Origin updates. | **Interaction Plane** (Boundary) |
+| **Diff Calculator** | Runtime measurement of drift. | **Control Plane** (Policy) |
+| **Origin Proxying** | Fallback to Origin for missing data. | **Data Plane** (Skillset) |
+
+### Phenomenon 6: Semiotic Indexing (Agent Onboarding)
+*Ingesting the documentation into the Agent brain.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Vector Embedding** | Converting docs to vector coordinates. | **Cognitive Plane** (Meaning) |
+| **RAG Ingestion** | Storing knowledge in Agent memory. | **Data Plane** (Schema) |
+| **Tool Registration** | Registering capabilities with the Orchestrator. | **Interaction Plane** (API) |
+
+### Phenomenon 7: Membrane Construction
+*Establishing boundaries and filters.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Sidecar Injection** | Attaching service mesh proxies. | **Interaction Plane** (Boundary) |
+| **Policy Enforcement** | Applying firewall/network rules. | **Control Plane** (Policy) |
+| **Egress Filtering** | Limiting outbound access. | **Scoping Factor** (Exposure) |
+
+### Phenomenon 8: The Ignition Event
+*The start of time and telemetry.*
+
+| Term | Definition within Zone 2 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Health Probing** | Liveness/Readiness checks. | **Temporal Factor** (State) |
+| **Boot Sequence** | Execution of entrypoint command. | **Control Plane** (Mechanics) |
+| **Telemetry Hook** | First emission of logs/metrics. | **Interaction Plane** (Visibility) |
+---
+## Zone 3: Operation (The Bridge)
+
+**Objective:** Execution, Adaptation, and Service.
+
+**Context:** Zone 3 is where the entity lives, breathes, and works. It is the domain of runtime dynamics, where the "Plan" meets "Reality."
+
+### Phenomenon 1: Metabolic Homeostasis
+*The struggle to stay alive and self-correct.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Heartbeat** | Signal of liveness to the control plane. | **Temporal Factor** (State) |
+| **Reconciliation Loop** | Restarts processes and fixes drift. | **Control Plane** (Mechanics) |
+| **Circuit Breaking** | Stops damage propagation to dependencies. | **Interaction Plane** (Boundary) |
+
+### Phenomenon 2: Elastic Morphology
+*Changing shape (scaling) under pressure.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Replica Expansion** | Horizontal scaling (Spawning clones). | **Fabrication Dimension** (Instance) |
+| **Throttling** | Refusing work to survive. | **Control Plane** (Policy) |
+| **Load Shedding** | Dropping low-priority tasks. | **Cognitive Plane** (Role) |
+
+### Phenomenon 3: Resource Combustion
+*The active consumption of economic value.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Metering Pulse** | Periodic recording of usage. | **Data Plane** (Substance) |
+| **Saturation Point** | Measure of resource fullness (%). | **Control Plane** (Orchestration) |
+| **Budget Alarm** | Trigger when cost exceeds limits. | **Control Plane** (Policy) |
+
+### Phenomenon 4: Kinetic Transduction
+*Transforming requests into work.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Ingress Event** | Arrival of a request. | **Interaction Plane** (Boundary) |
+| **Latency Span** | Duration of processing. | **Temporal Factor** (Flow) |
+| **Payload Processing** | Execution of business logic. | **Data Plane** (Skillset) |
+
+### Phenomenon 5: State Transmutation
+*The evolution of internal truth.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Transaction Commit** | Locking new truth to storage. | **Data Plane** (Substance) |
+| **Cache Invalidation** | Purging obsolete data. | **Temporal Factor** (State) |
+| **Event Emission** | Broadcasting state changes. | **Interaction Plane** (API) |
+
+### Phenomenon 6: Signal Emission (Observability)
+*The narrative of the self.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Log Stream** | Narrative diary of events. | **Cognitive Plane** (Meaning) |
+| **Metric Aggregation** | Numerical summary of health. | **Data Plane** (Properties) |
+| **Trace Propagation** | Context linking across boundaries. | **Interaction Plane** (Boundary) |
+
+### Phenomenon 7: Quantum Resonance Maintenance
+*The active flow between Twin and Origin.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Replay Stream** | Applying Origin events to Twin. | **Interaction Plane** (Protocol) |
+| **Drift Correction** | Overwriting Twin state to match Origin. | **Control Plane** (Mechanics) |
+| **Conflict Detection** | Spotting divergent writes. | **Control Plane** (Policy) |
+
+### Phenomenon 8: Semiotic Engagement (Agent Usage)
+*The active use by AI Agents.*
+
+| Term | Definition within Zone 3 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Tool Invocation** | Agent executing a command. | **Interaction Plane** (API) |
+| **Context Injection** | Feeding runtime state to the Agent. | **Cognitive Plane** (Meaning) |
+| **Reasoning Feedback** | Output returning to the Agent's brain. | **Cognitive Plane** (Role) |
 ---
 
-### Zone 2: Construction (Assembly & Wiring)
-**Purpose:** Materializing Law into Capability. (Focus: **Temporal** and **Control**)
+## Zone 4: Evaluation (The High Court)
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **II. Control** | **Temporal (T)** | **C-T** | 3 | **Build Execution:** The logic sequence that drives the deployment (e.g., Run Migra $\to$ Run dlt). |
-| **III. Cognitive** | **Entity (E)** | **G-E** | 3 | **Brain Assembly:** The wiring of the Agent to specific LLMs and Vector Stores; **Vectorization of Policies** for runtime guards. |
-| **I. Interaction** | **Temporal (T)** | **I-T** | 2 | **Instrumentation:** Attaching tracing and logging spans to the build artifact to enable runtime visibility. |
-| **IV. Data** | **Entity (E)** | **D-E** | 2 | **Artifact Creation:** Compiling the final binary or config blob. |
-| **II. Control** | **Spatial (S)** | **C-S** | 2 | **Agent Wiring:** Connecting the entity's ports and defining its security group ingress/egress rules. |
-| **IV. Data** | **Temporal (T)** | **D-T** | 1 | **Build Cache Strategy:** Defining which layers should be cached to improve build time efficiency. |
-| **I. Interaction** | **Entity (E)** | **I-E** | 1 | **Readiness Checks:** The specific tests required to declare the entity ready for deployment. |
+**Objective:** Judgment, Audit, and Optimization.
 
----
+**Context:** Zone 4 processes the *results* of Zone 3. It is the feedback loop that drives the evolution of the system. It answers: "Was it good? Was it cheap? Should it live?"
 
-### Zone 3: Execution (Operation & Matter)
-**Purpose:** The Active Runtime State and Value Creation. (Focus: **Data** and **Temporal**)
+### Phenomenon 1: The Quality Verdict (SLO)
+*The measurement of promises kept.*
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **IV. Data** | **Temporal (T)** | **D-T** | 3 | **State Transition:** The ACID persistence and commit logic that updates the entity's memory (Ledger). |
-| **III. Cognitive** | **Temporal (T)** | **G-T** | 3 | **Active Inference:** The execution of the Agent's reasoning loop (the thinking process) to generate a response. |
-| **I. Interaction** | **Spatial (S)** | **I-S** | 2 | **Storyboard Projection:** Live rendering of execution state into visual components for the Vista. |
-| **II. Control** | **Temporal (T)** | **C-T** | 2 | **Dynamic Arbitration:** Managing contention and implementing rate limiting and priority queues. |
-| **IV. Data** | **Entity (E)** | **D-E** | 2 | **Vector Materialization:** The physical creation of embeddings and indices from raw data. |
-| **II. Control** | **Entity (E)** | **C-E** | 1 | **Runtime Policy Enforcement:** Blocking actions in real-time that violate Zone 1 constraints. |
-| **I. Interaction** | **Entity (E)** | **I-E** | 1 | **Service Response:** The final delivery of the calculated value back to the user or downstream system. |
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Error Budget Burn** | Consumption of "reliability trust." | **Control Plane** (Policy) |
+| **Apdex Score** | User satisfaction score (0-1). | **Cognitive Plane** (Meaning) |
+| **Compliance Report** | Pass/Fail on Zone 0 laws. | **Control Plane** (Lifecycle) |
 
----
+### Phenomenon 2: The Economic Audit (ROI)
+*The calculation of value vs. combustion.*
 
-### Zone 4: Evaluation (Judgment & Feedback)
-**Purpose:** The Cybernetic Closure. Analyzing the Past to Inform the Future. (Focus: **Cognitive** and **Interaction**)
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Unit Economics** | Cost per transaction/unit. | **Data Plane** (Substance) |
+| **Waste Index** | Measurement of idle resources. | **Control Plane** (Orchestration) |
+| **Showback Report** | Invoice for the owner. | **Interaction Plane** (Boundary) |
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **III. Cognitive** | **Entity (E)** | **G-E** | 3 | **Pattern Recognition:** AI analysis of history to propose schema changes or identify new relationships. |
-| **I. Interaction** | **Entity (E)** | **I-E** | 3 | **Completeness Report:** The final verdict on whether Latent Behaviors were fulfilled. |
-| **IV. Data** | **Temporal (T)** | **D-T** | 2 | **Drift Detection:** Aggregating metrics to determine if the data distribution has changed since the last execution. |
-| **II. Control** | **Temporal (T)** | **C-T** | 2 | **Causal Attribution:** Logic that traces a failure event back to a specific Zone 1 declaration or Zone 2 build step. |
-| **III. Cognitive** | **Temporal (T)** | **G-T** | 2 | **Cognitive Audit:** Analyzing the Agent's reasoning path to ensure alignment was maintained during the execution (Z3). |
-| **I. Interaction** | **Temporal (T)** | **I-T** | 1 | **Cycle Metrics:** The total duration of the entire Zone 1-4 loop (Feedback time). |
-| **IV. Data** | **Entity (E)** | **D-E** | 1 | **Historical Ledger:** Storing the final results and quality metrics for long-term reference. |
+### Phenomenon 3: Obsolescence Determination
+*The decision to terminate.*
 
----
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **TTL Expiry** | Time-based death trigger. | **Temporal Factor** (Lifecycle) |
+| **Idleness Reaper** | Termination due to lack of use. | **Fabrication Dimension** (Termination) |
+| **Deprecation Flag** | Marking usage of old Zone 0 primitives. | **Temporal Factor** (State) |
 
-### Zone 5: Reflection (The Meta-Loop)
-**Purpose:** Synthesis, Simulation, Evolution. (Focus: **Cognitive** and **Control**)
+### Phenomenon 4: Anomaly Reconstruction
+*The autopsy of failure.*
 
-| Plane | Factor | Signature | Imp. | Specification (Highest Priority Focus) |
-| :--- | :--- | :--- | :--- | :--- |
-| **III. Cognitive** | **Temporal (T)** | **G-T** | 3 | **Evolutionary Agent:** The "Dreamer" that proposes schema changes and drafts the new Cuelang declarations. |
-| **II. Control** | **Spatial (S)** | **C-S** | 3 | **Simulation Runner:** Logic that spins up a temporary **Twin World (Z0)** to test evolutionary proposals. |
-| **I. Interaction** | **Temporal (T)** | **I-T** | 2 | **Proposal Review:** The human interface for approving/rejecting the Agent's generated schemas. |
-| **IV. Data** | **Temporal (T)** | **D-T** | 2 | **The Thought Ledger:** The persistence of Agent memories, simulation results, and reasoning traces. |
-| **III. Cognitive** | **Entity (E)** | **G-E** | 1 | **Pruning Strategy:** Logic for identifying and proposing the retirement of unused entities/schemas. |
-| **I. Interaction** | **Spatial (S)** | **I-S** | 1 | **Diff Visualization:** The UI tool that shows the semantic difference between the current Z1 and the proposed Z1. |
-| **II. Control** | **Entity (E)** | **C-E** | 1 | **Rollback Logic:** The controlled reversal strategy if a proposal fails in the Twin World. |
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Root Cause Path** | Chain of dependency failures. | **Control Plane** (Mechanics) |
+| **Snapshot Replay** | Loading Zone 3 state into debug. | **Temporal Factor** (Flow) |
+| **Black Box Dump** | Preservation of final memory state. | **Data Plane** (Substance) |
 
----
+### Phenomenon 5: Epistemic Feedback (Agent Grading)
+*Grading the understanding of AI Agents.*
 
-## 3. Layer 4: The Vista (The Subjective Perspective) - WIP
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Hallucination Rate** | Frequency of invalid parameter usage. | **Cognitive Plane** (Identity) |
+| **Tool Utility Score** | Did the tool solve the problem? | **Cognitive Plane** (Role) |
+| **Prompt Refinement** | Feedback to update Zone 1 docs. | **Data Plane** (Skillset) |
 
-Layer 4 is the **Projection Layer**. It transforms the **Raw Interaction** of Layer 3 into a **Curated Interface** for the user.
+### Phenomenon 6: Dimensional Collapse Analysis
+*The fate of the Twin.*
 
-1.  **The Navigator (Portal):**
-    * **Source:** Uses the **Cognitive Plane (Zone 1 Ontology)** to group entities by Meaning (Domain), not just by Type.
-    * **Function:** Provides a semantic map to navigate between Twin Worlds and visualize the **Storyboards** (Z3).
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Mergeability Check** | Can Twin state fold into Origin? | **Control Plane** (Mechanics) |
+| **Impact Simulation** | "What if this was Prod?" | **Cognitive Plane** (Meaning) |
+| **Promotion Order** | Elevating Twin to Origin status. | **Control Plane** (Lifecycle) |
 
-2.  **The Aligned Persona (Active Agents):**
-    * **Source:** Retrieves reasoning from **Zone 5 (Reflection)**.
-    * **Function:** The interactive interface that executes scoped actions and interacts safely based on the **Interaction Plane's** rules.
+### Phenomenon 7: Drift Forensics
+*Analyzing the distance between worlds.*
 
-## 4. Strategic Definition of Success
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Divergence Heatmap** | Visualization of data delta. | **Data Plane** (Schema) |
+| **Causality Trace** | Linking drift to user actions. | **Interaction Plane** (Boundary) |
+| **Sync Latency** | Lag time between Origin and Twin. | **Temporal Factor** (Flow) |
 
-1.  **MECE Compliance (Matrix Orthogonality):**
-    Every artifact belongs to exactly one cell in the **Zone $\times$ Plane** matrix. This eliminates architectural ambiguity. There is no confusion between "Where it is defined" (Z1) and "Where it runs" (Z3), or "Who controls it" (Control Plane) vs "Who perceives it" (Interaction Plane).
+### Phenomenon 8: The Archival Seal
+*The finality of existence.*
 
-2.  **Latent Behavior Visibility:**
-    By defining "Quality" in **Zone 1 (Ontology)** and assessing it in **Zone 4 (Evaluation)**, the system enforces abstract requirements mathematically.
-
-3.  **Agent Determinism (Wiring as Code):**
-    **Agent Wiring (Zone 2)** explicitly defines the inputs, outputs, memory scopes, and protocols for Agents. This allows for deterministic debugging of non-deterministic intelligence.
-
-4.  **Twin World Sovereignty:**
-    **Zone 0 (Meta)** abstracts the physical environment. This allows the entire Landscape to be portable. It can be instantiated in a **Simulation World** for AI training or chaotic testing without changing the Zone 1 Declarations.
-
-3.  **MECE Compliance:**
-    The **Zone $\times$ Plane** matrix ensures that every element of the architecture has a unique and non-overlapping time (Zone) and function (Plane), eliminating architectural ambiguity.
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Cold Storage Move** | Moving data to cheap tiers. | **Fabrication Dimension** (Termination) |
+| **Compliance Hash** | Cryptographic proof of history. | **Cognitive Plane** (Identity) |
+| **Data Purge** | Verifiable deletion (GDPR). | **Data Plane** (Substance) |
