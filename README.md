@@ -1,6 +1,4 @@
 # Unilateral: The Cybernetic Landscape Architecture
-### Canonical Architecture Reference (Zone $\times$ Plane $\times$ Factor)
-
 ## 1. The Architectural Axioms: 
     
 ### The Four Planes 
