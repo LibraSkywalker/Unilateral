@@ -359,6 +359,7 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 ## Zone 4: Evolution (The Wisdom Refinery)
 
 **Objective:** Synthesis, Sedimentation, and Selection.
+
 **Context:** Zone 4 processes the raw experience of Zone 3 into permanent *Knowledge*. It maintains the "Multi-Fact Documentation," ensuring that the system learns from every success and failure. It turns *Data* into *Wisdom*.
 
 ---
