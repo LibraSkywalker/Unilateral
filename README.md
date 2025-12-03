@@ -1,4 +1,4 @@
-# Unilateral: The Cybernetic Landscape Architecture
+# Unilateral: The Epistemic Fabrication Engine
 ## 1. The Architectural Axioms: 
     
 ### The Four Planes 
@@ -356,80 +356,71 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Reasoning Feedback** | Output returning to the Agent's brain. | **Cognitive Plane** (Role) |
 ---
 
-## Zone 4: Evaluation (The High Court)
+## Zone 4: Evolution (The Wisdom Refinery)
 
-**Objective:** Judgment, Audit, and Optimization.
+**Objective:** Synthesis, Sedimentation, and Selection.
+**Context:** Zone 4 processes the raw experience of Zone 3 into permanent *Knowledge*. It maintains the "Multi-Fact Documentation," ensuring that the system learns from every success and failure. It turns *Data* into *Wisdom*.
 
-**Context:** Zone 4 processes the *results* of Zone 3. It is the feedback loop that drives the evolution of the system. It answers: "Was it good? Was it cheap? Should it live?"
-
-### Phenomenon 1: The Quality Verdict (SLO)
-*The measurement of promises kept.*
-
-| Term | Definition within Zone 4 | Corresponding Axiom |
-| :--- | :--- | :--- |
-| **Error Budget Burn** | Consumption of "reliability trust." | **Control Plane** (Policy) |
-| **Apdex Score** | User satisfaction score (0-1). | **Cognitive Plane** (Meaning) |
-| **Compliance Report** | Pass/Fail on Zone 0 laws. | **Control Plane** (Lifecycle) |
-
-### Phenomenon 2: The Economic Audit (ROI)
-*The calculation of value vs. combustion.*
+---
+### Phenomenon 1: Reality Calibration (The Truth Delta)
+*Quantifying the gap between Zone 1 promises and Zone 3 behavior.*
 
 | Term | Definition within Zone 4 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Unit Economics** | Cost per transaction/unit. | **Data Plane** (Substance) |
-| **Waste Index** | Measurement of idle resources. | **Control Plane** (Orchestration) |
-| **Showback Report** | Invoice for the owner. | **Interaction Plane** (Boundary) |
+| **Divergence Vector** | The calculated distance between Spec and Reality (e.g., "Latency +300%"). | **Data Plane** (Properties) |
+| **Specimen Categorization** | Re-labeling the entity based on actual behavior (e.g., "Batch" vs "Real-time"). | **Cognitive Plane** (Identity) |
+| **Expectation Erosion** | Reducing confidence in the Spec if Reality contradicts it constantly. | **Control Plane** (Policy) |
 
-### Phenomenon 3: Obsolescence Determination
-*The decision to terminate.*
-
-| Term | Definition within Zone 4 | Corresponding Axiom |
-| :--- | :--- | :--- |
-| **TTL Expiry** | Time-based death trigger. | **Temporal Factor** (Lifecycle) |
-| **Idleness Reaper** | Termination due to lack of use. | **Fabrication Dimension** (Termination) |
-| **Deprecation Flag** | Marking usage of old Zone 0 primitives. | **Temporal Factor** (State) |
-
-### Phenomenon 4: Anomaly Reconstruction
-*The autopsy of failure.*
+### Phenomenon 2: Causal Attribution
+*Identifying the physics behind the variance.*
 
 | Term | Definition within Zone 4 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Root Cause Path** | Chain of dependency failures. | **Control Plane** (Mechanics) |
-| **Snapshot Replay** | Loading Zone 3 state into debug. | **Temporal Factor** (Flow) |
-| **Black Box Dump** | Preservation of final memory state. | **Data Plane** (Substance) |
+| **Factor Isolation** | Pinpointing the single variable responsible for a change. | **Data Plane** (Schema) |
+| **Dependency Mapping** | Tracing internal failures to external neighbor changes. | **Interaction Plane** (Boundary) |
+| **Exogenous Impact** | Attributing events to forces outside the system (e.g., Cloud Outage). | **Scoping Factor** (Exposure) |
 
-### Phenomenon 5: Epistemic Feedback (Agent Grading)
-*Grading the understanding of AI Agents.*
-
-| Term | Definition within Zone 4 | Corresponding Axiom |
-| :--- | :--- | :--- |
-| **Hallucination Rate** | Frequency of invalid parameter usage. | **Cognitive Plane** (Identity) |
-| **Tool Utility Score** | Did the tool solve the problem? | **Cognitive Plane** (Role) |
-| **Prompt Refinement** | Feedback to update Zone 1 docs. | **Data Plane** (Skillset) |
-
-### Phenomenon 6: Dimensional Collapse Analysis
-*The fate of the Twin.*
+### Phenomenon 3: Economic Crystallization
+*Turning raw expense data into unit economics wisdom.*
 
 | Term | Definition within Zone 4 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Mergeability Check** | Can Twin state fold into Origin? | **Control Plane** (Mechanics) |
-| **Impact Simulation** | "What if this was Prod?" | **Cognitive Plane** (Meaning) |
-| **Promotion Order** | Elevating Twin to Origin status. | **Control Plane** (Lifecycle) |
+| **Efficiency Ratio** | Derived constant of "Resource per Outcome." | **Data Plane** (Skillset) |
+| **Waste Pattern** | Identifying structural inefficiencies in logic loops. | **Control Plane** (Mechanics) |
+| **Yield Calculation** | The final ROI score of the entity. | **Cognitive Plane** (Meaning) |
 
-### Phenomenon 7: Drift Forensics
-*Analyzing the distance between worlds.*
-
-| Term | Definition within Zone 4 | Corresponding Axiom |
-| :--- | :--- | :--- |
-| **Divergence Heatmap** | Visualization of data delta. | **Data Plane** (Schema) |
-| **Causality Trace** | Linking drift to user actions. | **Interaction Plane** (Boundary) |
-| **Sync Latency** | Lag time between Origin and Twin. | **Temporal Factor** (Flow) |
-
-### Phenomenon 8: The Archival Seal
-*The finality of existence.*
+### Phenomenon 4: Epistemic Sedimentation (Truth Patching)
+*Overlaying "Runtime Reality" onto "Design Spec."*
 
 | Term | Definition within Zone 4 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Cold Storage Move** | Moving data to cheap tiers. | **Fabrication Dimension** (Termination) |
-| **Compliance Hash** | Cryptographic proof of history. | **Cognitive Plane** (Identity) |
-| **Data Purge** | Verifiable deletion (GDPR). | **Data Plane** (Substance) |
+| **Truth Patch** | Append-only override of Zone 1 Spec fields (e.g., "Note: Timeout is actually 8s"). | **Data Plane** (Properties) |
+| **Heuristic Injection** | Creating "Rules of Thumb" for future Agents based on past patterns. | **Cognitive Plane** (Meaning) |
+| **Divergence Warning** | Marking "Minefields" in the documentation where Spec is unreliable. | **Interaction Plane** (Boundary) |
+
+### Phenomenon 5: Semiotic Refinement (Prompt Evolution)
+*Optimizing the language used to control the entity.*
+
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Ambiguity Detection** | Finding Spec descriptions that caused Agent hallucinations. | **Cognitive Plane** (Identity) |
+| **Instruction Hardening** | Converting "Suggestions" into "Constraints" in System Prompts. | **Control Plane** (Policy) |
+| **Vocabulary Expansion** | Adding synonyms to vector indexes to improve tool discovery. | **Data Plane** (Schema) |
+
+### Phenomenon 6: Teleological Selection (Survival of the Fittest)
+*Deciding if a Twin should replace the Origin.*
+
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Fitness Score** | Composite metric: Is the Twin "Better" than Origin? | **Cognitive Plane** (Role) |
+| **Promotion Decree** | Atomic command to swap Twin into Origin slot. | **Control Plane** (Lifecycle) |
+| **Regression Block** | Blocking promotion due to violation of new Truths. | **Control Plane** (Mechanics) |
+
+### Phenomenon 7: Entropic Recycling (Clean Death)
+*Ensuring lessons survive the death of the entity.*
+
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Wisdom Extraction** | Saving "Patches" to the Zone 0 Library before deletion. | **Data Plane** (Substance) |
+| **State Fossilization** | Archiving final state for future forensics. | **Temporal Factor** (State) |
+| **Tombstone Marker** | Permanent record of *why* the entity died. | **Cognitive Plane** (Identity) |
