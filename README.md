@@ -425,3 +425,12 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Wisdom Extraction** | Saving "Patches" to the Zone 0 Library before deletion. | **Data Plane** (Substance) |
 | **State Fossilization** | Archiving final state for future forensics. | **Temporal Factor** (State) |
 | **Tombstone Marker** | Permanent record of *why* the entity died. | **Cognitive Plane** (Identity) |
+
+### Phenomenon 8: Exemplar Distillation (DSPy Optimization)
+*The preparation of "Training Data" for the AI Compiler. Converting runtime history into optimization fuel.*
+
+| Term | Definition within Zone 4 | Corresponding Axiom |
+| :--- | :--- | :--- |
+| **Trace Fossilization** | Freezing the dynamic Zone 3 interaction chain (Input → CoT → Output) into a serializable object for analysis. | **Temporal Factor** (State) |
+| **Metric Alignment** | Mapping business scores (Phenomenon 1) to Optimization Metrics (e.g., `dspy.Metric` returning 0.0-1.0). | **Control Plane** (Policy) |
+| **Bootstrap Injection** | Promoting high-scoring traces to become "Few-Shot Examples" in the next version of the Zone 1 System Prompt. | **Data Plane** (Substance) |
