@@ -100,15 +100,14 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Consistency Model** | The rules of data propagation (e.g., "Strong" vs "Eventual"). | **Data Plane** (Potential) |
 | **Version Strategy** | The logic of mutation naming (e.g., SemVer, Hashing). | **Control Plane** (Mechanics) |
 
-### Phenomenon 8: Signal Standardization (Senses)
-**The definition of how the system perceives itself.**
+### Phenomenon 8: Noetic Legislation (Cognitive Physics)
+*The definition of memory substance. Defining how experience is stored and retrieved.*
 
 | Term | Definition within Zone 0 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Telemetry Schema** | The standard format for logs, metrics, and traces. | **Interaction Plane** (Boundary) |
-| **Severity** | The taxonomy of urgency (e.g., "P0", "P1", "Info"). | **Cognitive Plane** (Meaning) |
-| **Correlation** | The logic for linking events across boundaries (Trace IDs). | **Control Plane** (Orchestration) |
----
+| **Engram Schema** | The atomic structure of a memory unit (e.g., `{Vector, Timestamp, Emotion, RawText}`). | **Data Plane** (Schema/Substance) |
+| **Recall Physics** | The laws of retrieval logic (e.g., "Cosine Similarity", "Time-Decay Weighting"). | **Control Plane** (Mechanics) |
+| **Cognitive Horizon** | The hard limit of the "Context Window" and how overflow is handled. | **Control Plane** (Policy) |
 
 ## Zone 1: Declaration (The Architect's Studio)
 
@@ -179,14 +178,14 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Limit Spec** | Maximum allowed consumption. | **Control Plane** (Policy) |
 | **Affinity Rule** | Physical placement preference. | **Control Plane** (Orchestration) |
 
-### Phenomenon 8: Integrity Certification
-*The seal of validity.*
+### Phenomenon 8: Cognitive Architecture (Mind Design)
+*The configuration of the MemMachine. Declaring the retention and recall strategy.*
 
 | Term | Definition within Zone 1 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Schema Validation** | Check against Zone 0 Metaschema. | **Control Plane** (Policy) |
-| **Policy Check** | Governance verification. | **Control Plane** (Lifecycle) |
-| **Signature Verify** | Proof of authorship. | **Cognitive Plane** (Identity) |
+| **Memory Mount** | Declaring the connection to a specific Memory Store (e.g., `use: episodic-db-v1`). | **Data Plane** (Potentials) |
+| **Focus Policy** | The filter definitions: What should be remembered? (e.g., "Ignore Heartbeats, Record Errors"). | **Control Plane** (Policy) |
+| **Persona Injection** | The foundational "Core Memories" injected at birth (System Prompt + Static Knowledge). | **Cognitive Plane** (Identity) |
 
 ### Phenomenon 9: Semiotic Embedding (Agent Readiness)
 *The encoding of meaning for AI consumption.*
@@ -268,14 +267,14 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Policy Enforcement** | Applying firewall/network rules. | **Control Plane** (Policy) |
 | **Egress Filtering** | Limiting outbound access. | **Scoping Factor** (Exposure) |
 
-### Phenomenon 8: The Ignition Event
-*The start of time and telemetry.*
+### Phenomenon 8: Synaptic Bonding (Cognitive Mounting)
+*The physical connection between the Compute (Worker) and the Memory (Store).*
 
 | Term | Definition within Zone 2 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Health Probing** | Liveness/Readiness checks. | **Temporal Factor** (State) |
-| **Boot Sequence** | Execution of entrypoint command. | **Control Plane** (Mechanics) |
-| **Telemetry Hook** | First emission of logs/metrics. | **Interaction Plane** (Visibility) |
+| **Vector Stream Init** | Establishing the active pipe to the Vector DB (e.g., Pinecone/Chroma Connection). | **Interaction Plane** (Boundary) |
+| **Context Pre-fill** | Loading the "Recent History" into the active Context Window before the first user interaction. | **Fabrication Dimension** (Instance) |
+| **Episodic ID Minting** | Generating the unique Session ID to tag this specific stream of consciousness. | **Cognitive Plane** (Identity) |
 ---
 ## Zone 3: Operation (The Bridge)
 
@@ -328,14 +327,14 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Cache Invalidation** | Purging obsolete data. | **Temporal Factor** (State) |
 | **Event Emission** | Broadcasting state changes. | **Interaction Plane** (API) |
 
-### Phenomenon 6: Signal Emission (Observability)
-*The narrative of the self.*
+### Phenomenon 6: Episodic Streaming (Experience Capture)
+*The active recording of "What is happening now" into the MemMachine.*
 
 | Term | Definition within Zone 3 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Log Stream** | Narrative diary of events. | **Cognitive Plane** (Meaning) |
-| **Metric Aggregation** | Numerical summary of health. | **Data Plane** (Properties) |
-| **Trace Propagation** | Context linking across boundaries. | **Interaction Plane** (Boundary) |
+| **Frame Capture** | Taking a snapshot of the Input/Output pair and serializing it. | **Temporal Factor** (Flow) |
+| **Emotional Tagging** | The Agent self-assessing the interaction (e.g., "Confused", "Confident") and tagging the memory. | **Cognitive Plane** (Meaning) |
+| **Working Memory Flush** | Moving data from the Context Window to the Vector Store when the window is full. | **Control Plane** (Mechanics) |
 
 ### Phenomenon 7: Quantum Resonance Maintenance
 *The active flow between Twin and Origin.*
@@ -417,14 +416,14 @@ Context: Zone 0 does not contain specific projects or data. It contains the defi
 | **Promotion Decree** | Atomic command to swap Twin into Origin slot. | **Control Plane** (Lifecycle) |
 | **Regression Block** | Blocking promotion due to violation of new Truths. | **Control Plane** (Mechanics) |
 
-### Phenomenon 7: Entropic Recycling (Clean Death)
-*Ensuring lessons survive the death of the entity.*
+### Phenomenon 7: Mnemonic Consolidation (Sleep Phase)
+*The offline processing of raw Episodic Memory into structured Semantic Knowledge.*
 
 | Term | Definition within Zone 4 | Corresponding Axiom |
 | :--- | :--- | :--- |
-| **Wisdom Extraction** | Saving "Patches" to the Zone 0 Library before deletion. | **Data Plane** (Substance) |
-| **State Fossilization** | Archiving final state for future forensics. | **Temporal Factor** (State) |
-| **Tombstone Marker** | Permanent record of *why* the entity died. | **Cognitive Plane** (Identity) |
+| **Noise Pruning** | Deleting duplicate or low-value memory frames (e.g., "Hello" messages) to save tokens. | **Data Plane** (Substance) |
+| **Insight Abstraction** | Compressing 100 specific episodes into 1 general rule (Generalization). | **Cognitive Plane** (Meaning) |
+| **Index Rebalancing** | Optimizing the Vector Store clusters for faster retrieval in the next cycle. | **Control Plane** (Mechanics) |
 
 ### Phenomenon 8: Exemplar Distillation (DSPy Optimization)
 *The preparation of "Training Data" for the AI Compiler. Converting runtime history into optimization fuel.*
